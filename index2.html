@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Characters Bio</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+#characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.character {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.character img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.character button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.character button:hover {
+    background: #555;
+}
+
+.bio {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Harry Potter Characters</h1>
+    </header>
+    
+    <div id="characters">
+        <!-- Harry Potter -->
+        <div class="character" data-character="harry-potter">
+            <h2>Harry Potter</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (9).jfif"alt="Harry Potter">
+            <button onclick="showBio('harry-potter')">Show Bio</button>
+            <p class="bio" id="harry-potter-bio">Harry Potter is a young wizard known for his bravery and the lightning-shaped scar on his forehead. He is famous for defeating the dark wizard Voldemort.</p>
+        </div>
+
+        <!-- Hermione Granger -->
+        <div class="character" data-character="hermione-granger">
+            <h2>Hermione Granger</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\Hermione_Granger_poster.jpg" alt="Hermione Granger">
+            <button onclick="showBio('hermione-granger')">Show Bio</button>
+            <p class="bio" id="hermione-granger-bio">Hermione Granger is one of Harry Potter's best friends and known for her intelligence and resourcefulness. She is a top student at Hogwarts School of Witchcraft and Wizardry.</p>
+        </div>
+
+        <!-- Ron Weasley -->
+        <div class="character" data-character="ron-weasley">
+            <h2>Ron Weasley</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\Ron_Weasley_poster.jpg" alt="Ron Weasley">
+            <button onclick="showBio('ron-weasley')">Show Bio</button>
+            <p class="bio" id="ron-weasley-bio">Ron Weasley is Harry Potter's other best friend and known for his loyalty and sense of humor. He comes from a large wizarding family.</p>
+        </div>
+
+        <!-- Albus Dumbledore -->
+        <div class="character" data-character="albus-dumbledore">
+            <h2>Albus Dumbledore</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download.jfif" alt="Albus Dumbledore">
+            <button onclick="showBio('albus-dumbledore')">Show Bio</button>
+            <p class="bio" id="albus-dumbledore-bio">Albus Dumbledore is the wise and powerful headmaster of Hogwarts. He is known for his fight against dark forces and his role as a mentor to Harry Potter.</p>
+        </div>
+
+        <!-- Severus Snape -->
+        <div class="character" data-character="severus-snape">
+            <h2>Severus Snape</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (1).jfif" alt="Severus Snape">
+            <button onclick="showBio('severus-snape')">Show Bio</button>
+            <p class="bio" id="severus-snape-bio">Severus Snape is a complex character, known for his role as Potions Master and later Headmaster at Hogwarts. He is revealed to have a deep, secret loyalty to Harry Potter.</p>
+        </div>
+
+        <!-- Draco Malfoy -->
+        <div class="character" data-character="draco-malfoy">
+            <h2>Draco Malfoy</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (2).jfif" alt="Draco Malfoy">
+            <button onclick="showBio('draco-malfoy')">Show Bio</button>
+            <p class="bio" id="draco-malfoy-bio">Draco Malfoy is a student at Hogwarts and rival to Harry Potter. He is known for his wealthy background and his antagonistic role throughout the series.</p>
+        </div>
+
+        <!-- Rubeus Hagrid -->
+        <div class="character" data-character="rubeus-hagrid">
+            <h2>Rubeus Hagrid</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (3).jfif" alt="Rubeus Hagrid">
+            <button onclick="showBio('rubeus-hagrid')">Show Bio</button>
+            <p class="bio" id="rubeus-hagrid-bio">Rubeus Hagrid is the Keeper of Keys and Grounds at Hogwarts. He is known for his love of magical creatures and his friendship with Harry Potter.</p>
+        </div>
+
+        <!-- Ginny Weasley -->
+        <div class="character" data-character="ginny-weasley">
+            <h2>Ginny Weasley</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (4).jfif" alt="Ginny Weasley">
+            <button onclick="showBio('ginny-weasley')">Show Bio</button>
+            <p class="bio" id="ginny-weasley-bio">Ginny Weasley is Ron's younger sister and Harry Potter's eventual love interest. She is known for her strong will and talent in magic.</p>
+        </div>
+
+        <!-- Luna Lovegood -->
+        <div class="character" data-character="luna-lovegood">
+            <h2>Luna Lovegood</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (5).jfif"alt="Luna Lovegood">
+            <button onclick="showBio('luna-lovegood')">Show Bio</button>
+            <p class="bio" id="luna-lovegood-bio">Luna Lovegood is a quirky and kind-hearted student at Hogwarts. She is known for her unique perspective on the magical world and her loyalty to her friends.</p>
+        </div>
+
+        <!-- Bellatrix Lestrange -->
+        <div class="character" data-character="bellatrix-lestrange">
+            <h2>Bellatrix Lestrange</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (6).jfif" alt="Bellatrix Lestrange">
+            <button onclick="showBio('bellatrix-lestrange')">Show Bio</button>
+            <p class="bio" id="bellatrix-lestrange-bio">Bellatrix Lestrange is a fanatical Death Eater and one of Voldemort's most loyal followers. She is known for her cruelty and strong magical abilities.</p>
+        </div>
+
+        <!-- Horace Slughorn -->
+        <div class="character" data-character="horace-slughorn">
+            <h2>Horace Slughorn</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (7).jfif" alt="Horace Slughorn">
+            <button onclick="showBio('horace-slughorn')">Show Bio</button>
+            <p class="bio" id="horace-slughorn-bio">Horace Slughorn is the Potions Master who succeeds Severus Snape. He is known for his knack for recognizing talented students and his connections with influential wizards.</p>
+        </div>
+
+        <!-- Minerva McGonagall -->
+        <div class="character" data-character="minerva-mcgonagall">
+            <h2>Minerva McGonagall</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\download (8).jfif" alt="Minerva McGonagall">
+            <button onclick="showBio('minerva-mcgonagall')">Show Bio</button>
+            <p class="bio" id="minerva-mcgonagall-bio">Minerva McGonagall is the Deputy Headmistress of Hogwarts and Head of Gryffindor House. She is known for her strict but fair approach to teaching and her transformation abilities.</p>
+        </div>
+
+        <!-- Sirius Black -->
+        <div class="character" data-character="sirius-black">
+            <h2>Sirius Black</h2>
+            <img src="C:\Users\Lenovo\OneDrive - SUSTAINOMETRIC\Desktop\project2\Sirius_Black.jpeg" alt="Sirius Black">
+            <button onclick="showBio('sirius-black')">Show Bio</button>
+            <p class="bio" id="sirius-black-bio">Sirius Black is Harry Potter's godfather and a member of the Order of the Phoenix. He is known for his rebellious nature and tragic fate.</p>
+        </div>
+    </div>
+
+    <script>function showBio(characterId) {
+        const bioElement = document.getElementById(`${characterId}-bio`);
+        if (bioElement.style.display === 'none' || bioElement.style.display === '') {
+            bioElement.style.display = 'block';
+        } else {
+            bioElement.style.display = 'none';
+        }
+    }
+    </script>
+</body>
+</html>

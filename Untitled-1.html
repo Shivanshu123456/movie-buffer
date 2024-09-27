@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background: #1f1f1f;
+            color: #f1f1f1;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1f1f1f;
+        }
+
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .question h2 {
+                font-size: 1rem;
+            }
+
+            .question label {
+                font-size: 0.9rem;
+            }
+
+            .submit-btn {
+                font-size: 1rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Harry Potter Quiz</h1>
+    </header>
+
+    <div class="container">
+        <form onsubmit="event.preventDefault(); checkQuiz();">
+            <!-- Question 1 -->
+            <div class="question">
+                <h2>1. What is Harry Potter's middle name?</h2>
+                <label><input type="radio" name="q1" value="James"> James</label>
+                <label><input type="radio" name="q1" value="Sirius"> Sirius</label>
+                <label><input type="radio" name="q1" value="Albus"> Albus</label>
+                <label><input type="radio" name="q1" value="Severus"> Severus</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h2>2. Who is the headmaster of Hogwarts when Harry first arrives?</h2>
+                <label><input type="radio" name="q2" value="Minerva McGonagall"> Minerva McGonagall</label>
+                <label><input type="radio" name="q2" value="Severus Snape"> Severus Snape</label>
+                <label><input type="radio" name="q2" value="Albus Dumbledore"> Albus Dumbledore</label>
+                <label><input type="radio" name="q2" value="Filius Flitwick"> Filius Flitwick</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h2>3. What is the name of Harry Potter's owl?</h2>
+                <label><input type="radio" name="q3" value="Hedwig"> Hedwig</label>
+                <label><input type="radio" name="q3" value="Scabbers"> Scabbers</label>
+                <label><input type="radio" name="q3" value="Crookshanks"> Crookshanks</label>
+                <label><input type="radio" name="q3" value="Errol"> Errol</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h2>4. Who is the Half-Blood Prince?</h2>
+                <label><input type="radio" name="q4" value="Harry Potter"> Harry Potter</label>
+                <label><input type="radio" name="q4" value="Severus Snape"> Severus Snape</label>
+                <label><input type="radio" name="q4" value="Tom Riddle"> Tom Riddle</label>
+                <label><input type="radio" name="q4" value="Draco Malfoy"> Draco Malfoy</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h2>5. What form does Harry's Patronus take?</h2>
+                <label><input type="radio" name="q5" value="Stag"> Stag</label>
+                <label><input type="radio" name="q5" value="Doe"> Doe</label>
+                <label><input type="radio" name="q5" value="Phoenix"> Phoenix</label>
+                <label><input type="radio" name="q5" value="Otter"> Otter</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <h2>6. What is the name of the three-headed dog that guards the Sorcerer’s Stone?</h2>
+                <label><input type="radio" name="q6" value="Fang"> Fang</label>
+                <label><input type="radio" name="q6" value="Fluffy"> Fluffy</label>
+                <label><input type="radio" name="q6" value="Norbert"> Norbert</label>
+                <label><input type="radio" name="q6" value="Buckbeak"> Buckbeak</label>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <h2>7. Who teaches Harry Potter to play Quidditch?</h2>
+                <label><input type="radio" name="q7" value="Oliver Wood"> Oliver Wood</label>
+                <label><input type="radio" name="q7" value="Madam Hooch"> Madam Hooch</label>
+                <label><input type="radio" name="q7" value="Minerva McGonagall"> Minerva McGonagall</label>
+                <label><input type="radio" name="q7" value="Fred Weasley"> Fred Weasley</label>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h2>8. Who kills Dobby the house-elf?</h2>
+                <label><input type="radio" name="q8" value="Bellatrix Lestrange"> Bellatrix Lestrange</label>
+                <label><input type="radio" name="q8" value="Lucius Malfoy"> Lucius Malfoy</label>
+                <label><input type="radio" name="q8" value="Voldemort"> Voldemort</label>
+                <label><input type="radio" name="q8" value="Narcissa Malfoy"> Narcissa Malfoy</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h2>9. What spell does Harry use to kill Voldemort?</h2>
+                <label><input type="radio" name="q9" value="Expelliarmus"> Expelliarmus</label>
+                <label><input type="radio" name="q9" value="Avada Kedavra"> Avada Kedavra</label>
+                <label><input type="radio" name="q9" value="Expecto Patronum"> Expecto Patronum</label>
+                <label><input type="radio" name="q9" value="Sectumsempra"> Sectumsempra</label>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <h2>10. Who was the Master of the Elder Wand before Harry Potter?</h2>
+                <label><input type="radio" name="q10" value="Albus Dumbledore"> Albus Dumbledore</label>
+                <label><input type="radio" name="q10" value="Draco Malfoy"> Draco Malfoy</label>
+                <label><input type="radio" name="q10" value="Tom Riddle"> Tom Riddle</label>
+                <label><input type="radio" name="q10" value="Severus Snape"> Severus Snape</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        function checkQuiz() {
+            // Initialize score
+            let score = 0;
+
+            // Correct answers
+            const correctAnswers = {
+                q1: 'James',
+                q2: 'Albus Dumbledore',
+                q3: 'Hedwig',
+                q4: 'Severus Snape',
+                q5: 'Stag',
+                q6: 'Fluffy',
+                q7: 'Oliver Wood',
+                q8: 'Bellatrix Lestrange',
+                q9: 'Expelliarmus',
+                q10: 'Draco Malfoy',
+                q11: 'Phoenix Feather',
+                q12: 'Hermione Granger',
+                q13: 'Nagini',
+                q14: 'Harry Potter',
+                q15: 'Room of Requirement'
+            };
+
+            // Loop through each question and check if the selected answer is correct
+            for (let question in correctAnswers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            // Display score
+            const totalQuestions = Object.keys(correctAnswers).length;
+            alert(`Your score: ${score} out of ${totalQuestions}`);
+        }
+    </script>
+</body>
+</html>
